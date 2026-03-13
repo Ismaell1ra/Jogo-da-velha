@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(78, 78, 235);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+#placar {
+  display:flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #555;
+}
+
+#tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* voltar aqui */
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 15px;
+}
+
+.casa {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.casa:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.casa.x {
+  color: #e74c3c;
+}
+
+.casa.o {
+  color: #3498db;
+}
+
+#status {
+  font-size: 1.3em;
+  margin-bottom: 1.5rem;
+  color: #333;
+  min-height: 1.5rem;
+}
+
+#reiniciar {
+  background: rgb(78, 78, 235);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#reiniciar:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .casa {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
